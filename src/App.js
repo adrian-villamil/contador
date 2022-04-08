@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Boton from './components/Boton.js';
+import Pantalla from './components/Pantalla';
 
 function App() {
+  const [contador, setContador] = useState(0);
+
+  const iniciarContador = () => {
+    setContador(contador + 1);
+  }
+
+  const reiniciarContador = () => {
+    setContador(0);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Contador</h1>
+      <div className='contenedor'>
+        <Pantalla valor = {contador} />
+        <Boton esClic = {true} texto = 'Iniciar' funcion = {iniciarContador} />
+        <Boton esClic = {false} texto = 'Reiniciar' funcion = {reiniciarContador} />
+      </div>
     </div>
   );
 }

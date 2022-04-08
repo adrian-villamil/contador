@@ -1,0 +1,26 @@
+button {
+    margin: 8px;
+    padding: 12px;
+    width: 120px;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+
+.boton-clic {
+    background-color: rgb(43, 170, 43);
+}
+
+.boton-clic:hover {
+    background-color: rgb(43, 201, 43);
+}
+
+.boton-reiniciar {
+    background-color: rgb(184, 59, 59);
+}
+
+.boton-reiniciar:hover {
+    background-color: rgb(211, 65, 65);
+}
